@@ -1,7 +1,4 @@
 import requests
-from pyquery import PyQuery as pq
-import csv
-import re
 from bs4 import BeautifulSoup
 import pandas as pd
 
@@ -37,39 +34,6 @@ WeakAgainst = []
 hero_url = []
 # innate = []
 # sumskills = []
-
-# ----------------------------------------------------------------------------------------------------------------------
-
-# def innate_skill(html_content):
-#     inborn = html_content.find('div', class_='css-18v97ez e2gxw6z3')
-#     if inborn:
-#         flairs = inborn.find_all('div', class_='css-1l6y0w9 e1y8mv8s0')
-#         # print(flairs)
-#         for flair in flairs:
-#             # print(flair)
-#             senses = flair.find_all('div', class_='row')
-#             for sense in senses:
-#                 image_container = sense.find_all('div', style='position:relative')
-#                 # .find('div', style_='position:relative')
-#                 for i in image_container:
-#                     image = i.find('img')
-#                     if 'e_grayscale' not in image['src']:
-#                         print(image['alt'])
-#                         innate.append(image['alt'])
-
-
-# ----------------------------------------------------------------------------------------------------------------------
-
-# def summoner_skills(html_content):
-#     inborn = html_content.find('ul', class_='css-eh1etn e1qbmy400')
-#
-#     image_container = inborn.find_all('div', style='position:relative')
-#     print(image_container)
-#     # for image in image_container:
-#     #     skill = image.find('img')
-#     #     print(skill['alt'])
-#     #     sumskills.append(skill['alt'])
-
 
 # ----------------------------------------------------------------------------------------------------------------------
 
@@ -179,14 +143,6 @@ for content in tag_3:
     hero_url.append(hero_u)
 
 # ----------------------------------------------------------------------------------------------------------------------
-
-
-    # for url in hero_url:
-    #     html_detail = requests.get(url, headers=headers).text
-    #     html_con = BeautifulSoup(html_detail, 'html.parser')
-    #     # innate_skill(html_con)
-    #     # summoner_skills(html_con)
-
 
 if __name__ == '__main__':
     print(Rank)
